@@ -19,7 +19,7 @@ class Hangman():
         print(f"Good guess! {guess} is in the word.")
 
 
-    def check_guess(self,guess):
+    def _check_guess(self,guess):
         guess = guess.lower()
         if guess in self.word:
             self.__substitute_letter(guess)
@@ -37,7 +37,7 @@ class Hangman():
             elif guess in self.list_of_guesses:
                 print("You already tried that letter!")
             else:
-                self.check_guess(guess)
+                self._check_guess(guess)
                 self.list_of_guesses.append((guess))
 
 
