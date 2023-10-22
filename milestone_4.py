@@ -10,16 +10,19 @@ class Hangman():
         self.num_letters = len(set(self.word))
         self.list_of_guesses = []
 
+    def __substitute_letter(self,guess):
+        for letter in self.word:
+            if letter == guess:
+                index_of_letter = self.word.index(letter)
+                self.word_guessed[index_of_letter] = guess
+            self.num_letters -= 1
+        print(f"Good guess! {guess} is in the word.")
+
 
     def check_guess(self,guess):
         guess = guess.lower()
         if guess in self.word:
-            for letter in self.word:
-                if letter == guess:
-                    index_of_letter = self.word.index(letter)
-                    self.word_guessed[index_of_letter] = guess
-            self.num_letters -= 1
-            print(f"Good guess! {guess} is in the word.")
+            self.__substitute_letter(guess)
         else:
             self.num_lives -=1
             print(f"Sorry, {guess} is not in the word.")
@@ -36,7 +39,6 @@ class Hangman():
             else:
                 self.check_guess(guess)
                 self.list_of_guesses.append((guess))
-            print(self.word_guessed)
 
 
 hangman_game = Hangman(word_list)
