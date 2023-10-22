@@ -35,8 +35,9 @@ Keep track of your score and guessing history.
 ## File Structure
 The project file structure is organized as follows:
 
-- hangman.py:     The main Hangman game script.
-- wordlist.txt:   A text file containing a list of words for the game.
+- milestone_3.py: Functionality for asking and checking for a guess.
+- milestone_2.py: The very basic functionality of the Hangman game.
+- all_words.py:   A file containing a list of words for the game.
 - README.MD:      The README file you are currently reading.
 
 ## License
