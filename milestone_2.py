@@ -1,3 +1,4 @@
+import numpy as np
 import random
 from all_words import word_list 
 
