@@ -37,11 +37,12 @@ Keep track of your score and guessing history.
 ## File Structure
 The project file structure is organized as follows:
 
+- milestone_5.py: The finished product where you can play.
 - milestone_4.py: Hangman Class with all its attributes.
 - milestone_3.py: Functionality for asking and checking for a guess.
 - milestone_2.py: The very basic functionality of the Hangman game.
 - all_words.py:   A file containing a list of words for the game.
 - README.MD:      The README file you are currently reading.
-Defining what happens if guess is (not) in the word .
+
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
