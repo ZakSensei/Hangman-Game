@@ -1,13 +1,13 @@
 word_list = [
-    "Strawberry", 
-    "Watermelon", 
+    "Strawberry",
+    "Watermelon",
     "Apple", 
-    "Pear"
+    "Pear",
     "Tomato", 
     "Banana", 
     "Orange", 
     "Mango",
-    "Grape", 
+    "Grape",
     "Lemon", 
     "Avocado", 
     "Peach", 
