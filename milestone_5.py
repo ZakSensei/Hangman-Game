@@ -10,16 +10,14 @@ class Hangman():
         self.num_letters = len(set(self.word))
         self.list_of_guesses = []
 
-    #fix me, first letter never matches
     def __substitute_letter(self,guess):
-        for letter in self.word:
-            if letter == guess or letter == guess.upper():
-                index_of_letter = self.word.index(letter)
-                self.word_guessed[index_of_letter] = guess
+        for index, letter in enumerate(self.word):
+            if letter == guess: 
+                self.word_guessed[index] = guess
         self.num_letters -= 1
         print(f"Good guess! {guess} is in the word.")
 
-    #fix me, first letter 
+
     def _check_guess(self,guess):
         guess = guess.lower()
         if guess in self.word:
@@ -44,11 +42,7 @@ class Hangman():
                 self._check_guess(guess)
                 self.list_of_guesses.append((guess))
             
-            #These print statements are for testing purposes, Delete afterwords
-            print(self.word)               
-            print(self.word_guessed)
-            print(self.num_letters)
-            print(self.list_of_guesses)
+            print(f"{self.word_guessed} \n")
             break
 
 
@@ -57,12 +51,12 @@ def play_game(word_list):
     game = Hangman(word_list,num_lives)
     while True:
         if game.num_lives == 0:
-            print("You lost!")
+            print(f"Sorry, You have lost! The word was {game.word}")
             break
         if game.num_letters > 0:
             game.ask_for_input()
         if game.num_lives != 0 and game.num_letters <= 0:
-            print("Congratulations. You won the game!")
+            print(f"Congratulations. Your word was {game.word}. You've won the game!")
             break
 
 play_game(word_list)
