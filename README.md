@@ -9,8 +9,7 @@
 
   
 ## Description
-Get ready for a classic word-guessing challenge brought to life in Python. Lets tests your word-guessing skills
-This interactive Hangman game is one you can play right in your terminal. it's a fantastic way to dive into the world of Python programming and learn game development. 
+The Hangman Project is a Python-based word-guessing game. I created it to challenge my word-guessing skills while having fun. The goal of the project was to develop an interactive Hangman game that users can enjoy in a terminal. Through this project, I improved my Python programming skills, delving into concepts like conditionals, loops, and functions. I learned how to manage user input, implement game mechanics, and create an engaging user experience. In the end, I had a working Hangman game that I could play and share with others. It was a great way to enhance my Python programming and game development skills. Enjoy coding your own Hangman game!
 
 
 ## Installation
