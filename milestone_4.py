@@ -11,6 +11,7 @@ class Hangman():
         self.list_of_guesses = []
 
     def __substitute_letter(self,guess):
+        #private method only to be called by the class
         for letter in self.word:
             if letter == guess:
                 index_of_letter = self.word.index(letter)
@@ -20,6 +21,12 @@ class Hangman():
 
 
     def _check_guess(self,guess):
+        '''
+        This function check whether the letter guessed by the user is in the secret word that was randomly chosen by the computer.
+
+        Args:
+            guess (str): The letter guessed by the user.
+        '''
         guess = guess.lower()
         if guess in self.word:
             self.__substitute_letter(guess)
@@ -30,6 +37,12 @@ class Hangman():
 
 
     def ask_for_input(self):
+        '''
+        This function continuously ask the user for a letter and validates it.
+
+        Returns:
+            str: The user input in form of a string
+        '''
         while True:
             guess = input("Guess a letter: ")
             if not(len(guess) == 1 and guess.isalpha()):
