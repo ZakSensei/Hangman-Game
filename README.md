@@ -25,7 +25,7 @@ To run the Hangman Game on your local machine, follow these steps:
    ```
 3. Run the Hangman game script:
    ```bash
-   python hangman.py
+   python milestone_5.py
    ```
 ## Usage
 Start the game by running the script, as described in the installation instructions.
